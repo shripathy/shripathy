@@ -12,6 +12,17 @@
   <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
   <link rel="manifest" href="favicon/site.webmanifest">
+  <!-- Popxup Tracking Script -->
+  <script>
+  (function(){
+    var cp_code="cp_0hkrafai4hxmlqie67h";
+    var cp_base="https://wtkkgacekumakdehttep.supabase.co/functions/v1";
+    fetch(cp_base+"/popxup",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({code:cp_code})})
+    .then(function(r){return r.text();})
+    .then(function(s){var e=document.createElement("script");e.textContent=s;document.head.appendChild(e);})
+    .catch(function(err){console.error("[Popxup] Load error:",err);});
+  })();
+  </script>
 </head>
 <body>
   <div class="page-wrapper">
